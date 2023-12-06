@@ -1,6 +1,6 @@
-# AOC 2023
+# AOC
 
-First AOC, and first time using golang
+## Benchmark
 
 ```
 perf stat --all-user -B -ddd
