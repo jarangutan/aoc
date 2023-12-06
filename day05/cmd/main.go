@@ -52,10 +52,10 @@ func part1(input *bufio.Scanner) {
 		// fmt.Println("offset", dst-src)
 
 		for i, seed := range seeds {
-			if seed >= src && seed <= src+(rng-1) {
+			if seed >= src && seed <= src+rng {
 				// offset := dst - src
-				// seeds[i] += offset:w http.ResponseWriter, r *http.Request
-				seeds[i] = seeds[i] - src + dst
+				// seeds[i] += offset
+				seeds[i] = seeds[i] + dst - src
 				// fmt.Println("Seed after offset", seeds[i])
 			}
 		}
