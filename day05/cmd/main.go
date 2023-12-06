@@ -34,16 +34,16 @@ func part1(input *bufio.Scanner) {
 	input.Scan()
 
 	for i := 0; input.Scan(); i++ {
-		in := input.Text()
+		line := input.Text()
 
 		// Skip new line and label
-		if in == "" {
+		if line == "" {
 			input.Scan()
 			input.Scan()
 			continue
 		}
 
-		fields := strings.Fields(in)
+		fields := strings.Fields(line)
 		dst, _ := strconv.Atoi(fields[0])
 		src, _ := strconv.Atoi(fields[1])
 		rng, _ := strconv.Atoi(fields[2])
