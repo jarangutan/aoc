@@ -53,9 +53,9 @@ func part1(input *bufio.Scanner) {
 
 		for i, seed := range seeds {
 			if seed >= src && seed <= src+rng {
-				// offset := dst - src
-				// seeds[i] += offset
-				seeds[i] = seeds[i] + dst - src
+				offset := dst - src
+				fmt.Println(offset)
+				seeds[i] += offset
 				// fmt.Println("Seed after offset", seeds[i])
 			}
 		}
